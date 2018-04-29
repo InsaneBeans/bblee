@@ -16,6 +16,10 @@
 		    <el-input placeholder="昵称" v-model="userForm.nickname"></el-input>
 		  </el-form-item>
 
+      <el-form-item prop="email">
+        <el-input placeholder="邮箱" v-model="userForm.email"></el-input>
+      </el-form-item>
+
 		  <el-form-item prop="password">
 		    <el-input placeholder="密码" v-model="userForm.password"></el-input>
 		  </el-form-item>
@@ -38,6 +42,7 @@ export default {
     	userForm: {
 	      	account: '',
 	      	nickname: '',
+          email:'',
 	      	password: ''
 	      },
       	rules: {
@@ -49,6 +54,9 @@ export default {
 	      		{ required: true, message: '请输入昵称', trigger: 'blur' },
 	      		{ max: 10, message: '不能大于10个字符', trigger: 'blur' }
 	      	],
+          email: [
+            { required: true, message: '请输入你的邮箱地址', trigger: 'blur' },
+          ],
 	      	password: [
 	        	{ required: true, message: '请输入密码', trigger: 'blur' },
 	        	{ max: 10, message: '不能大于10个字符', trigger: 'blur' }
@@ -64,7 +72,7 @@ export default {
           if (valid) {
 
 			that.$store.dispatch('register', that.userForm).then(() => {
-				that.$message({message: '注册成功 快写文章吧',type: 'success',showClose: true});
+				that.$message({message: '注册成功 还不快去写个文章装个B...',type: 'success',showClose: true});
 				that.$router.push({ path: '/' })
 			}).catch((error) => {
 				if(error !== 'error'){

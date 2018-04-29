@@ -50,13 +50,11 @@ public class User extends BaseEntity<Long>{
 
     @Column(name = "mobile_phone_number",length = 20)
     private String mobilePhoneNumber;
-    
 
     /**
      * 加密密码时使用的种子
      */
     private String salt;
-    
 
     /**
      * 创建时间
@@ -65,8 +63,7 @@ public class User extends BaseEntity<Long>{
     @Column(name = "create_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDate;
-    
-    
+
     /**
      * 最后一次登录时间
      */

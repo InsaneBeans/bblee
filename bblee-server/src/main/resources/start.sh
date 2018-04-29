@@ -1,0 +1,1 @@
+java -server -Xms512m -Xmx512m -jar  blog-api-0.0.1-SNAPSHOT.jar &

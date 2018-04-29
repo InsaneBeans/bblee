@@ -1,0 +1,5 @@
+# idea ignore
+.idea/
+
+# project
+node_modules/

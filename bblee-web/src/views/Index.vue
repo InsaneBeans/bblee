@@ -2,27 +2,26 @@
 <div>
   <el-container>
     <el-main class="me-articles">
-    
+
     	<article-item v-for="a in articles" :key="a.id" v-bind="a"></article-item>
-			
+
     </el-main>
-    
+
     <el-aside>
-    	
+
     	<card-me class="me-area"></card-me>
     	<card-tag :tags="hotTags"></card-tag>
     	<card-article cardHeader="最新文章" :articles="newArticles"></card-article>
-    	
+
     	<card-article cardHeader="最热文章" :articles="hotArticles"></card-article>
-    		
+
     </el-aside>
-     
+
   </el-container>
 </div>
 </template>
 
 <script>
-import CardMe from '@/components/card/CardMe'
 import CardArticle from '@/components/card/CardArticle'
 import CardTag from '@/components/card/CardTag'
 import ArticleItem from '@/components/article/ArticleItem'
@@ -59,7 +58,7 @@ export default {
   				that.$message({type: 'error', message: '文章加载失败!',showClose: true})
   			}
   		})
-  		
+
   	},
   	getHotArtices() {
   		let that = this
@@ -69,9 +68,9 @@ export default {
   			if(error !== 'error'){
   				that.$message({type: 'error', message: '最热文章加载失败!',showClose: true})
   			}
-  			
+
   		})
-  		
+
   	},
   	getNewArtices() {
   		let that = this
@@ -81,9 +80,9 @@ export default {
   			if(error !== 'error'){
   				that.$message({type: 'error', message: '最新文章加载失败!',showClose: true})
   			}
-  			
+
   		})
-  		
+
   	},
   	getHotTags() {
   		let that = this
@@ -93,13 +92,12 @@ export default {
   			if(error !== 'error'){
   				that.$message({type: 'error', message: '最热标签加载失败!',showClose: true})
   			}
-  			
+
   		})
   	}
-  	
+
   },
   components:{
-  	'card-me':CardMe,
   	'card-article':CardArticle,
   	'card-tag':CardTag,
   	'article-item':ArticleItem
@@ -117,7 +115,7 @@ export default {
 	margin-left: 20px;
 	width: 260px;
 }
-  
+
 .el-main {
 	padding: 0px;
   line-height: 16px;

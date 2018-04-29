@@ -2,7 +2,7 @@
   <el-header class="me-area">
 		<el-row class="me-header">
 
-			  <el-col :span="4" class="me-header-left">
+			  <el-col :span="3" class="me-header-left">
 			  	 <router-link to="/" class="me-title">
 			  	 	<img src="../assets/img/logo.png"/>
 			  	</router-link>
@@ -14,7 +14,7 @@
 					  <el-menu-item index="/category/all">文章分类</el-menu-item>
 					  <el-menu-item index="/ta    g/all">标签</el-menu-item>
             <el-menu-item index="/messageBoard">留言板</el-menu-item>
-					  <el-menu-item index="/aboutMe">关于我</el-menu-item>
+					  <el-menu-item index="/aboutMe">关于作者</el-menu-item>
 
 					  <el-col :span="4" :offset="4">
 					  	<el-menu-item index="/write"><i class="el-icon-edit"></i>写文章</el-menu-item>
@@ -31,8 +31,8 @@
 				  <el-menu :router=true menu-trigger="click" mode="horizontal" active-text-color="#5FB878">
 
 				  	<template v-if="!user.login">
-					  	<el-menu-item index="/login"><el-button type="text">登录</el-button></el-menu-item>
-							<el-menu-item index="/register"><el-button type="text">注册</el-button></el-menu-item>
+					  	<el-menu-item index="/login"><el-button>登录</el-button></el-menu-item>
+							<el-menu-item index="/register"><el-button>注册</el-button></el-menu-item>
 						</template>
 
 						<template v-else>

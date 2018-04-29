@@ -1,7 +1,7 @@
 <template>
 <el-card class="me-area" :body-style="{ padding: '16px' }">
 	  <div class="me-article-header">
-	  	
+
 	    <a @click="view(id)" class="me-article-title">{{title}}</a>
 	    <el-button v-if="weight > 0" class="me-article-icon" type="text">置顶</el-button>
 	    <span class="me-pull-right me-article-count">
@@ -11,7 +11,7 @@
 	    	<i class="el-icon-view"></i>&nbsp;{{viewCounts}}
 	    </span>
 	  </div>
-	  
+
 	  <div class="me-artile-description">
 	    	{{summary}}
 	  </div>
@@ -19,13 +19,13 @@
 	  	<span class="me-article-author">
 	    	<i class="me-icon-author"></i>&nbsp;{{author.nickname}}
 	    </span>
-	  	
+
 	  	<el-tag v-for="t in tags" :key="t.tagname" size="mini" type="success">{{t.tagname}}</el-tag>
-	  	
+
 	  	<span class="me-pull-right me-article-count">
 	    	<i class="el-icon-time"></i>&nbsp;{{createDate}}
 	    </span>
-	  	
+
 	  </div>
 	</el-card>
 </template>

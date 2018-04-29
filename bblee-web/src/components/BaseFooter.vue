@@ -1,8 +1,9 @@
 <template>
 	<el-footer class="me-area">
+    <div>
+    </div>
 		<div class="me-footer">
-			<p>Copyright © 2018 bblee版权所有</p>
-      <p>备案号:黔ICP备 15005796号-2  黔公网安备 33010602002000号</p>
+      Copyright © 2018 bblee版权所有 | 备案号:京ICP备18020697号
 		</div>
 	</el-footer>
 
@@ -26,20 +27,19 @@ export default {
 <style>
 
 .el-footer {
-  min-width: 100%;
-  box-shadow: 0 -2px 3px hsla(0,0%,7%,.1), 0 0 0 1px hsla(0,0%,7%,.1);
+  width: 100%;
   position:absolute;
   bottom:0;
   left:0;
+  /*height:20px;*/
   z-index: 1024;
 }
 .me-footer{
   text-align: center;
-  line-height: 60px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-
+  line-height: 15px;
+  font-size: 14px;
 }
+
 .me-login-design-color{
   color: #5FB878 !important;
 }
